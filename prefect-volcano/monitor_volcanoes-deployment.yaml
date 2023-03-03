@@ -1,0 +1,51 @@
+###
+### A complete description of a Prefect Deployment for flow 'NZ Volcano Status Alerts'
+###
+name: nz-volcano-status
+description: null
+version: e299aa18ee2e45f57609e3b3a4e42fb7
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: NZ Volcano Status Alerts
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 499e8a29-b09b-4894-958c-c6174fee184a
+  _block_document_name: anonymous-900b4079-59d5-4ce9-b42e-f30fa2007d27
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  bucket_path: bucket-full-of-sunshine/flows
+  aws_access_key_id: '**********'
+  aws_secret_access_key: '**********'
+  _block_document_id: ac50943c-ea1e-4c53-9e19-93d325854ec9
+  _block_document_name: s3-bucket
+  _is_anonymous: false
+  block_type_slug: s3
+  _block_type_slug: s3
+path: volcano
+entrypoint: volcano.py:monitor_volcanoes
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-02-03T19:58:50.354781+00:00'

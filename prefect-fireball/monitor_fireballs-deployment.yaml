@@ -1,0 +1,54 @@
+###
+### A complete description of a Prefect Deployment for flow 'Fireballs from Outer Space'
+###
+name: cneos-fireballs
+description: JPS CNEOS fireball reports in the last 24 hours.
+version: 41c822fe80f7bee802e9f42918b125da
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule:
+  interval: 86400.0
+  anchor_date: '2023-01-28T02:31:12.492000+00:00'
+  timezone: America/New_York
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Fireballs from Outer Space
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 61a1a564-82a9-4740-bf52-d4cdd6a949e0
+  _block_document_name: anonymous-a74ea110-9034-4b81-8963-a1b9884d0a46
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  bucket_path: bucket-full-of-sunshine/flows
+  aws_access_key_id: '**********'
+  aws_secret_access_key: '**********'
+  _block_document_id: ac50943c-ea1e-4c53-9e19-93d325854ec9
+  _block_document_name: s3-bucket
+  _is_anonymous: false
+  block_type_slug: s3
+  _block_type_slug: s3
+path: fireball
+entrypoint: fireball.py:monitor_fireballs
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-02-14T14:53:36.701824+00:00'
