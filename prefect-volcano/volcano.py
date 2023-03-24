@@ -9,7 +9,7 @@ api_url = 'https://api.geonet.org.nz/volcano/val'
 headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'
 }
-notify_block = "deep-thoughts-webhook"
+notify_block = ""
 
 @task(retries=3, retry_delay_seconds=10)
 def get_data_from_api():
